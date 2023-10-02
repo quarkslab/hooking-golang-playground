@@ -10,7 +10,7 @@
 typedef long long ll;
 
 typedef struct GoString {  
-    const char *p; 
+    char *p; 
     ptrdiff_t n; 
 } GoString;
 

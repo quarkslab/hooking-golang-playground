@@ -139,7 +139,7 @@ restoreStack()  {
                     : "m"(stackbackupp)
                     : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
                     ); 
-    // pivot back the curren stack and return  
+    // pivot back the current stack and return  
     __asm__ volatile(
         "xchg (%r9), %rsp;"
         "ret"

@@ -4,7 +4,7 @@
 /* Hook module */
 
 /*
-Convert ascii string (a-z) to uppercase  (A-Z)
+Convert ASCII string (a-z) to uppercase (A-Z)
 */
 void 
 toUpper(GoString str) {

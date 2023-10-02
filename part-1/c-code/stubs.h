@@ -29,7 +29,7 @@ Stub to call into the hook
 void callCFunc() __attribute__((naked));
 
 /*
-Stub to restore the ABI from C back to Go. As this is a trampoline hoo hence, there is 
+Stub to restore the ABI from C back to Go. As this is a trampoline too hence, there is 
 no result, this section jumps back to RESTORE_CTX.
 */
 void abiRestore() __attribute__((naked));
