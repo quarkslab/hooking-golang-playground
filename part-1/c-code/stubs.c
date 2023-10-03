@@ -24,14 +24,16 @@ changeStack()  {
     __asm__ volatile("mov %0, %%r9"
                     : 
                     : "m"(stackbackupp)
-                    :"rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
+                    :"rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", 
+                    "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
                     ); 
     __asm__ volatile("mov %rsp, (%r9)");
     // get the new stack pointer and pivot the stack
     __asm__ volatile("mov %0, %%r9"
                     : 
                     : "m"(newstackp) 
-                    :"rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
+                    :"rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", 
+                    "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
                     );    
     __asm__ volatile(
         "xchg (%r9), %rsp;"
@@ -47,7 +49,8 @@ saveCtx() {
     __asm__ volatile("mov %0, %%r9"
                     : 
                     : "m"(stackbackupp)
-                    : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
+                    : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", 
+                    "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
                     ); 
     
     __asm__ volatile("mov (%r9), %r9"); 
@@ -90,7 +93,8 @@ callCFunc()  {
     __asm__ volatile("mov %0, %%r9"
                      : 
                      :"m"(funcToCallp)
-                     : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
+                     : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", 
+                     "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
                      );
     __asm__ volatile(
         "call *%r9;"
@@ -137,7 +141,8 @@ restoreStack()  {
     __asm__ volatile("mov %0, %%r9"
                     : 
                     : "m"(stackbackupp)
-                    : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi", "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
+                    : "rax", "rdx", "rdx", "rbx", "rcx", "rsi", "rdi",
+                    "r8", "r10", "r11", "r10", "r12", "r14", "r13", "r15"
                     ); 
     // pivot back the current stack and return  
     __asm__ volatile(
