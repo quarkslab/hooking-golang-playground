@@ -1,6 +1,6 @@
 # Golang function hook using C and assembly
 
-The repository contains the code presented in the article [“Let’s Go into the rabbit hole (part 1) — the challenges of dynamically hooking Golang programs”](). It demonstrates how one could hook a *Golang* function using a trampoline hook written in C and assembly.
+The repository contains the code presented in the article [“Let’s Go into the rabbit hole (part 1) — the challenges of dynamically hooking Golang programs”](https://blog.quarkslab.com/lets-go-into-the-rabbit-hole-part-1-the-challenges-of-dynamically-hooking-golang-program.html). It demonstrates how one could hook a *Golang* function using a trampoline hook written in C and assembly.
 
 
 ## Purpose
