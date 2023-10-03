@@ -30,6 +30,11 @@ To load the `hooklib.so`, you'll need a shared library loader to load it into `s
 For example, it can be used using the [kubo injector](https://github.com/kubo/injector). Once the library is loaded, you should see the message **Injection completed, try your luck ;)**. Then you could enter the validation password "validateme" to validate the challenge.
 
 
+
+https://github.com/quarkslab/hooking-golang-playground/assets/52884020/db8590ad-fb58-48ee-929a-b8bc34b90daa
+
+
+
 ## License
 
 [Apache License 2.0](./LICENSE)
